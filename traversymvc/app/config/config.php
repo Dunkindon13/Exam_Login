@@ -1,13 +1,31 @@
 <?php
-  // DB Params
-  define('DB_HOST', 'localhost');
-  define('DB_USER', 'root');
-  define('DB_PASS', '123456');
-  define('DB_NAME', 'loginform');
+// DB Params
+$tav = 1;
 
-  // App Root
-  define('APPROOT', dirname(dirname(__FILE__)));
-  // URL Root
-  define('URLROOT', 'http://localhost/login');
-  // Site Name
-  define('SITENAME', 'Login Form');
+if ($tav == 1) {
+    define('DB_HOST', 'localhost:81');
+    define('DB_USER', 'root');
+    //tav machine
+    define('DB_PASS', '');
+    define('DB_NAME', 'exam_accounts');
+
+    // App Root
+    define('APPROOT', dirname(dirname(__FILE__)));
+    // URL Root
+    define('URLROOT', '_YOUR_URL_');
+    // Site Name
+    define('SITENAME', 'LoginMVC');
+} else {
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    //tav machine
+    //define('DB_PASS', 'root');
+    define('DB_NAME', 'exam_accounts');
+
+    // App Root
+    define('APPROOT', dirname(dirname(__FILE__)));
+    // URL Root
+    define('URLROOT', '_YOUR_URL_');
+    // Site Name
+    define('SITENAME', 'LoginMVC');
+}

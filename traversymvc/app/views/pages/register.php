@@ -8,11 +8,11 @@
             <form action="<?php echo URLROOT; ?> /pages/register" method="post">
 
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="username">Name</label>
                     <input type="text" name="name"
-                           class="form-control <?php echo (!empty($data['name_error'])) ? 'is-invalid' : ''; ?>"
-                           value="<?php echo $data['name']; ?>">
-                    <span class="invalid-feedback"><?php echo $data['name_error']; ?></span>
+                           class="form-control <?php echo (!empty($data['username_error'])) ? 'is-invalid' : ''; ?>"
+                           value="<?php echo $data['username']; ?>">
+                    <span class="invalid-feedback"><?php echo $data['username_error']; ?></span>
                 </div>
 
                 <div class="form-group">
@@ -37,6 +37,14 @@
                            class="form-control  <?php echo (!empty($data['pass_confirm_error'])) ? 'is-invalid' : ''; ?>"
                            value="<?php echo $data['confirm_password']; ?>">
                     <span class="invalid-feedback"><?php echo $data['pass_confirm_error']; ?></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" name="age"
+                           class="form-control  <?php echo (!empty($data['age_error'])) ? 'is-invalid' : ''; ?>"
+                           value="<?php echo $data['age']; ?>">
+                    <span class="invalid-feedback"><?php echo $data['age_error']; ?></span>
                 </div>
 
                 <div class="row">
